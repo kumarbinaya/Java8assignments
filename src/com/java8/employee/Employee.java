@@ -3,6 +3,15 @@ package com.java8.employee;
 public class Employee {
     private String firstName;
     private String lastName;
+    private double salary;
+    private String department;
+
+    public Employee(String firstName, String lastName, double salary, String department) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
+        this.department = department;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -11,6 +20,8 @@ public class Employee {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+
+
 
     public String getLastName() {
         return lastName;
@@ -35,7 +46,13 @@ public class Employee {
     public void setDepartment(String department) {
         this.department = department;
     }
-
-    private double salary;
-    private String department;
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", salary=" + salary +
+                ", department='" + department + '\'' +
+                '}';
+    }
 }
